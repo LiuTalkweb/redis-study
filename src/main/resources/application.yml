@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /redis
+spring:
+  redis:
+    cluster:
+      nodes: node1:6379,node2:6379,node3:6379,node1:6380,node2:6380,node3:6380
+    password: 123456
+    database: 0
+    connect-timeout: 3000
+    lettuce:
+      pool:
+        max-idle: 50
+        min-idle: 10
+        max-active: 100
+        max-wait: 1000
+
